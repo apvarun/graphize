@@ -1,0 +1,26 @@
+{
+  "name": "graphize",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "source": "./index.html",
+  "scripts": {
+    "dev": "parcel",
+    "build": "parcel build"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "reaflow": "^5.0.6"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "^18.0.6",
+    "autoprefixer": "^10.4.8",
+    "parcel": "^2.7.0",
+    "postcss": "^8.4.14",
+    "process": "^0.11.10",
+    "tailwindcss": "^3.1.8"
+  }
+}
