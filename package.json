@@ -4,9 +4,12 @@
   "type": "module",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "source": "./index.html",
+  "homepage": "https://apvarun.github.io/graphize",
   "scripts": {
     "dev": "parcel",
-    "build": "parcel build"
+    "build": "parcel build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@monaco-editor/react": "^4.4.5",
@@ -21,6 +24,9 @@
     "yamljs": "^0.3.0"
   },
   "devDependencies": {
+    "@parcel/compressor-brotli": "^2.7.0",
+    "@parcel/compressor-gzip": "^2.7.0",
+    "@parcel/optimizer-esbuild": "^2.7.0",
     "@types/downloadjs": "^1.4.3",
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
@@ -28,6 +34,8 @@
     "@types/yamljs": "^0.2.31",
     "autoprefixer": "^10.4.8",
     "buffer": "^6.0.3",
+    "elkjs": "^0.8.1",
+    "gh-pages": "^4.0.0",
     "parcel": "^2.7.0",
     "postcss": "^8.4.14",
     "process": "^0.11.10",

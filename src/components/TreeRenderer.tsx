@@ -48,6 +48,8 @@ const TreeRenderer = ({
     }
   }, [eventContext.zoom]);
 
+  if(nodes.length===0 || edges.length===0) return null;
+
   return (
     <TransformWrapper
       wheel={{ step: 0.1 }}
