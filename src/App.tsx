@@ -5,6 +5,7 @@ import Editor from "./components/Editor";
 import parser from "./lib/parser";
 import { TreeState } from "./lib/types";
 import demoJson from "./assets/demoJson";
+import { EventContextProvider } from "./lib/EventContext";
 
 function App() {
   const [input, setInput] = useState(demoJson);
@@ -29,7 +30,7 @@ function App() {
   }, []);
 
   return (
-    <>
+    <EventContextProvider>
       <h1 className="px-4 py-2 text-center font-bold">Graphize 🚀</h1>
       <div className="flex-1" ref={treeRef}>
         <TreeRenderer
@@ -41,7 +42,7 @@ function App() {
         />
       </div>
       <Editor input={input} onChange={setInput} />
-    </>
+    </EventContextProvider>
   );
 }
 

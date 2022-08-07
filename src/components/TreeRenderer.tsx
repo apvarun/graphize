@@ -1,7 +1,12 @@
 import { Canvas, Edge, MarkerArrow, Node, CanvasRef } from "reaflow";
-import { useCallback, useRef, useState } from "react";
+import { useCallback, useContext, useEffect, useRef, useState } from "react";
 import { TreeState } from "../lib/types";
-import { TransformComponent, TransformWrapper } from "react-zoom-pan-pinch";
+import {
+  ReactZoomPanPinchRef,
+  TransformComponent,
+  TransformWrapper,
+} from "react-zoom-pan-pinch";
+import EventContext from "../lib/EventContext";
 
 const EmptyElt = () => {
   return null;
@@ -12,11 +17,15 @@ const TreeRenderer = ({
   edges,
   width,
   height,
-}: TreeState & { width: number; height: number }) => {
+}: TreeState & {
+  width: number;
+  height: number;
+}) => {
   const [paneWidth, setPaneWidth] = useState(2000);
   const [paneHeight, setPaneHeight] = useState(2000);
 
   const canvasRef = useRef<CanvasRef>(null);
+  const transformRef = useRef<ReactZoomPanPinchRef>(null);
 
   const calculatePaneWidthAndHeight = useCallback(() => {
     let newHeight = 0;
@@ -31,6 +40,14 @@ const TreeRenderer = ({
     setPaneWidth(newWidth < width ? width : newWidth + 100);
   }, [width, height]);
 
+  const eventContext = useContext(EventContext);
+
+  useEffect(() => {
+    if (transformRef.current) {
+      transformRef.current.centerView(1);
+    }
+  }, [eventContext.zoom]);
+
   return (
     <TransformWrapper
       wheel={{ step: 0.1 }}
@@ -39,9 +56,11 @@ const TreeRenderer = ({
       zoomAnimation={{
         animationType: "linear",
       }}
+      ref={transformRef}
     >
       <TransformComponent>
         <Canvas
+          className="canvas"
           nodes={nodes}
           edges={edges}
           node={({ ...props }) => {
@@ -86,6 +105,7 @@ const TreeRenderer = ({
           maxWidth={paneWidth}
           width={width}
           height={height}
+          zoomable={false}
         />
       </TransformComponent>
     </TransformWrapper>

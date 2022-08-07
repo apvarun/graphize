@@ -13,6 +13,10 @@
 body {
   min-width: 100%;
   min-height: 100vh;
+}
+
+body,
+.canvas {
   background-color: white;
   background-image: radial-gradient(#000 2%, transparent 1%),
     radial-gradient(#000 2%, transparent 1%);
@@ -27,6 +31,7 @@ body {
   animation: dashdraw 0.5s linear infinite;
   stroke-width: 1;
 }
+
 @keyframes dashdraw {
   0% {
     stroke-dashoffset: 10;

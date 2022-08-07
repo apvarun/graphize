@@ -6,7 +6,6 @@ const json = `
   "name": "Lane Villarreal",
   "email": "lanevillarreal@artiq.com",
   "countries": [
-    "Mali",
     "Slovenia",
     "Greenland"
   ],
