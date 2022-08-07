@@ -19,8 +19,9 @@ function App() {
   const [[width, height], setSize] = useState([200, 200]);
 
   useEffect(() => {
-    setState(parser(input));
-  }, [input]);
+    const parsedData = parser(demoJson);
+    setState(parsedData);
+  }, []);
 
   useEffect(() => {
     let newWidth = treeRef?.current?.clientWidth;
@@ -31,7 +32,9 @@ function App() {
 
   return (
     <EventContextProvider>
-      <h1 className="px-4 py-2 text-center font-bold">Graphize 🚀</h1>
+      <h1 className="px-4 py-2 text-center font-bold cursor-default select-none">
+        Graphize 🚀
+      </h1>
       <div className="flex-1" ref={treeRef}>
         <TreeRenderer
           key={input}
@@ -41,7 +44,13 @@ function App() {
           height={height}
         />
       </div>
-      <Editor input={input} onChange={setInput} />
+      <Editor
+        input={input}
+        onChange={({ text, data }) => {
+          setInput(text);
+          setState(data);
+        }}
+      />
     </EventContextProvider>
   );
 }

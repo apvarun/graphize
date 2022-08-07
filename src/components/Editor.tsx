@@ -2,16 +2,20 @@ import { useContext, useEffect, useState } from "react";
 import MonacoEditor, { loader } from "@monaco-editor/react";
 import download from "downloadjs";
 import { toPng } from "html-to-image";
+import Toastify from "toastify-js";
+import "toastify-js/src/toastify.css";
 
 import NightOwlTheme from "../assets/night-owl-theme.json";
 import EventContext from "../lib/EventContext";
+import parser from "../lib/parser";
+import { TreeState } from "../lib/types";
 
 function Editor({
   input,
   onChange,
 }: {
   input: string;
-  onChange: (value: string) => void;
+  onChange: (value: { text: string; data: TreeState }) => void;
 }) {
   const [visible, setVisible] = useState(false);
   const [text, setText] = useState(input);
@@ -36,6 +40,28 @@ function Editor({
       toPng(node).then((dataUrl) => {
         download(dataUrl, `Graphize.png`);
       });
+    }
+  };
+
+  const onRender = () => {
+    try {
+      const parsedData = parser(text);
+      onChange({
+        text,
+        data: parsedData,
+      });
+      setVisible(false);
+    } catch {
+      console.log("Error");
+      Toastify({
+        text: "Not valid JSON/YAML content.",
+        duration: 2000,
+        gravity: "top",
+        position: "right",
+        style: {
+          background: "linear-gradient(135deg,#F5515F,#A1051D)",
+        },
+      }).showToast();
     }
   };
 
@@ -113,7 +139,9 @@ function Editor({
             </svg>
           </button>
         </div>
-        <p className="mb-2">Replace the demo content with your own JSON/YAML</p>
+        <p className="mb-2 text-slate-400">
+          Replace the demo content with your own JSON/YAML
+        </p>
         <div className="w-full flex-1">
           <MonacoEditor
             theme="night-owl"
@@ -127,11 +155,8 @@ function Editor({
           />
         </div>
         <button
-          onClick={() => {
-            onChange(text);
-            setVisible(false);
-          }}
-          className="w-full text-center px-4 py-2 rounded bg-white hover:bg-slate-100 text-slate-900 mt-2"
+          onClick={onRender}
+          className="w-full text-center px-4 py-2 rounded bg-white hover:bg-slate-100 text-slate-900 mt-4"
         >
           Rerender
         </button>
