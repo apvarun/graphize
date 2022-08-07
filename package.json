@@ -5,11 +5,26 @@
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "source": "./index.html",
   "homepage": "https://apvarun.github.io/graphize",
+  "license": "MIT",
+  "author": {
+    "name": "Varun A P",
+    "url": "https://apvarun.com"
+  },
+  "keywords": [
+    "visualizer",
+    "json",
+    "yaml",
+    "tree"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/apvarun/graphize.git"
+  },
   "scripts": {
     "dev": "parcel",
     "build": "parcel build",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@monaco-editor/react": "^4.4.5",
