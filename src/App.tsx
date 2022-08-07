@@ -1,10 +1,10 @@
 import { useEffect, useRef, useState } from "react";
-import TreeRenderer from "./components/TreeRenderer";
-import jsonparser from "./lib/jsonparser";
-import { TreeState } from "./lib/types";
 
-import demoJson from "./assets/demoJson";
+import TreeRenderer from "./components/TreeRenderer";
 import Editor from "./components/Editor";
+import parser from "./lib/parser";
+import { TreeState } from "./lib/types";
+import demoJson from "./assets/demoJson";
 
 function App() {
   const [input, setInput] = useState(demoJson);
@@ -18,7 +18,7 @@ function App() {
   const [[width, height], setSize] = useState([200, 200]);
 
   useEffect(() => {
-    setState(jsonparser(input));
+    setState(parser(input));
   }, [input]);
 
   useEffect(() => {
