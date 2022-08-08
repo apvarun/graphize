@@ -42,6 +42,8 @@
     "@parcel/compressor-brotli": "^2.7.0",
     "@parcel/compressor-gzip": "^2.7.0",
     "@parcel/optimizer-esbuild": "^2.7.0",
+    "@parcel/packager-raw-url": "^2.7.0",
+    "@parcel/transformer-webmanifest": "^2.7.0",
     "@types/downloadjs": "^1.4.3",
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
