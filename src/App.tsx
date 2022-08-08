@@ -8,7 +8,6 @@ import demoJson from "./assets/demoJson";
 import { EventContextProvider } from "./lib/EventContext";
 
 function App() {
-
   const [input, setInput] = useState(demoJson);
 
   const [state, setState] = useState<TreeState>({
@@ -20,10 +19,9 @@ function App() {
   const [[width, height], setSize] = useState([200, 200]);
 
   useEffect(() => {
+    // @ts-ignore
+    window.g = null;
 
-  // @ts-ignore
-  window.g = null;
-  
     const parsedData = parser(demoJson);
     setState(parsedData);
   }, []);
@@ -37,7 +35,7 @@ function App() {
 
   return (
     <EventContextProvider>
-      <h1 className="px-4 py-2 text-center font-bold cursor-default select-none">
+      <h1 className="px-4 py-2 text-xl lg:text-lg text-center font-bold cursor-default select-none">
         Graphize 🚀
       </h1>
       <div className="flex-1" ref={treeRef}>
