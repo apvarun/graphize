@@ -22,7 +22,7 @@
   },
   "scripts": {
     "dev": "parcel",
-    "build": "parcel build",
+    "build": "parcel build --no-source-maps --public-url /graphize/",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
