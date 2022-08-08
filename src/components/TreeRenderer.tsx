@@ -7,10 +7,14 @@ import {
   TransformWrapper,
 } from "react-zoom-pan-pinch";
 import EventContext from "../lib/EventContext";
+import { Item, Menu, TriggerEvent, useContextMenu } from "react-contexify";
+import Toastify from "toastify-js";
 
 const EmptyElt = () => {
   return null;
 };
+
+const NODE_MENU_ID = "node-menu";
 
 const TreeRenderer = ({
   nodes,
@@ -26,6 +30,10 @@ const TreeRenderer = ({
 
   const canvasRef = useRef<CanvasRef>(null);
   const transformRef = useRef<ReactZoomPanPinchRef>(null);
+
+  const { show } = useContextMenu({
+    id: NODE_MENU_ID,
+  });
 
   const calculatePaneWidthAndHeight = useCallback(() => {
     let newHeight = 0;
@@ -48,69 +56,98 @@ const TreeRenderer = ({
     }
   }, [eventContext.zoom]);
 
-  if(nodes.length===0 || edges.length===0) return null;
+  function handleContextMenu(event: TriggerEvent, data: any) {
+    event.preventDefault();
+
+    show(event, {
+      props: { data },
+    });
+  }
+  const handleItemClick = async ({ props }: any) => {
+    await navigator.clipboard.writeText(JSON.stringify(props.data || {}));
+    Toastify({
+      text: "Copied to clipboard 🎉",
+      duration: 2000,
+      gravity: "bottom",
+      position: "right",
+      style: {
+        background: "linear-gradient(135deg,#42E695,#3BB2B8)",
+      },
+    }).showToast();
+  };
+
+  if (nodes.length === 0 || edges.length === 0) return null;
 
   return (
-    <TransformWrapper
-      wheel={{ step: 0.1 }}
-      limitToBounds={false}
-      maxScale={4}
-      zoomAnimation={{
-        animationType: "linear",
-      }}
-      ref={transformRef}
-    >
-      <TransformComponent>
-        <Canvas
-          className="canvas"
-          nodes={nodes}
-          edges={edges}
-          node={({ ...props }) => {
-            return (
-              <Node
-                {...props}
-                style={{ stroke: "#1a192b", fill: "white", strokeWidth: 1 }}
-                label={<EmptyElt />}
-              >
-                {(event) => (
-                  <foreignObject
-                    height={event.height}
-                    width={event.width}
-                    x={0}
-                    y={0}
-                    style={{
-                      pointerEvents: "none",
-                      position: "absolute",
-                      left: 0,
-                      top: 0,
-                    }}
-                  >
-                    <div className="p-2.5">
-                      <div className="whitespace-pre mx-auto inline-block">
-                        {props.properties.text}
+    <>
+      <TransformWrapper
+        wheel={{ step: 0.1 }}
+        limitToBounds={false}
+        maxScale={4}
+        zoomAnimation={{
+          animationType: "linear",
+        }}
+        ref={transformRef}
+      >
+        <TransformComponent>
+          <Canvas
+            className="canvas"
+            nodes={nodes}
+            edges={edges}
+            node={({ ...props }) => {
+              return (
+                <Node
+                  {...props}
+                  style={{ stroke: "#1a192b", fill: "white", strokeWidth: 1 }}
+                  label={<EmptyElt />}
+                >
+                  {(event) => (
+                    <foreignObject
+                      height={event.height}
+                      width={event.width}
+                      x={0}
+                      y={0}
+                      style={{
+                        position: "absolute",
+                        left: 0,
+                        top: 0,
+                      }}
+                    >
+                      <div
+                        className="p-2.5"
+                        onContextMenu={(evt) =>
+                          handleContextMenu(evt, event.node.data)
+                        }
+                      >
+                        <div className="whitespace-pre mx-auto inline-block">
+                          {props.properties.text}
+                        </div>
                       </div>
-                    </div>
-                  </foreignObject>
-                )}
-              </Node>
-            );
-          }}
-          arrow={<MarkerArrow style={{ fill: "#b1b1b7" }} />}
-          edge={<Edge className="edge" />}
-          fit={true}
-          readonly={true}
-          dragEdge={null}
-          dragNode={null}
-          ref={canvasRef}
-          onLayoutChange={calculatePaneWidthAndHeight}
-          maxHeight={paneHeight}
-          maxWidth={paneWidth}
-          width={width}
-          height={height}
-          zoomable={false}
-        />
-      </TransformComponent>
-    </TransformWrapper>
+                    </foreignObject>
+                  )}
+                </Node>
+              );
+            }}
+            arrow={<MarkerArrow style={{ fill: "#b1b1b7" }} />}
+            edge={<Edge className="edge" />}
+            fit={true}
+            readonly={true}
+            dragEdge={null}
+            dragNode={null}
+            ref={canvasRef}
+            onLayoutChange={calculatePaneWidthAndHeight}
+            maxHeight={paneHeight}
+            maxWidth={paneWidth}
+            width={width}
+            height={height}
+            zoomable={false}
+          />
+        </TransformComponent>
+      </TransformWrapper>
+      <Menu id={NODE_MENU_ID}>
+        <Item onClick={handleItemClick}>Copy item</Item>
+      </Menu>
+    </>
   );
 };
 

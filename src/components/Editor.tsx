@@ -3,7 +3,6 @@ import MonacoEditor, { loader } from "@monaco-editor/react";
 import download from "downloadjs";
 import { toPng } from "html-to-image";
 import Toastify from "toastify-js";
-import "toastify-js/src/toastify.css";
 
 import NightOwlTheme from "../assets/night-owl-theme.json";
 import EventContext from "../lib/EventContext";

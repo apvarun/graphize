@@ -26,7 +26,7 @@ const jsonparser = (jsonStr: string) => {
 
   const json = JSON.parse(jsonStr);
 
-  function addNode(text: string, id: string) {
+  function addNode(obj: any, text: string, id: string) {
     const { width, height } = calculateSize(text);
 
     nodes.push({
@@ -34,12 +34,13 @@ const jsonparser = (jsonStr: string) => {
       text,
       height,
       width,
+      data: obj,
     });
   }
 
   function nodeParser(obj: any, id: number, from?: number) {
     if (STATIC_TYPES.includes(typeof obj)) {
-      addNode(obj, String(id));
+      addNode(obj, obj, String(id));
       if (from) {
         edges.push({
           id: `${from}-${id}`,
@@ -59,13 +60,16 @@ const jsonparser = (jsonStr: string) => {
         .sort();
 
       let text = "";
+      const data: Record<string, any> = {};
       staticKeys.forEach((key) => {
         if (text) text += "\n";
+
+        data[key] = obj[key];
 
         text += `${key}: ${obj[key]}`;
       });
 
-      addNode(text, String(id));
+      addNode(data, text, String(id));
 
       if (from) {
         edges.push({
@@ -84,7 +88,7 @@ const jsonparser = (jsonStr: string) => {
       let oldId = id;
       nonStaticKeys.forEach((key) => {
         id++;
-        addNode(key, String(id));
+        addNode(key, key, String(id));
 
         edges.push({
           id: `${oldId}-${id}`,
