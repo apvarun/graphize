@@ -20,6 +20,13 @@ Visualize and download JSON / YAML content in your browser
 - Formatting for content editor
 - Download as PNG for reuse
 
+### Roadmap
+
+- XML Support
+- Download SVG for Reuse
+- Copy child tree
+- Save to URL
+
 ## Credits
 
 This software uses the following open source packages:

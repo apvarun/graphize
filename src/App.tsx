@@ -35,25 +35,23 @@ function App() {
 
   return (
     <EventContextProvider>
-      <h1 className="px-4 py-2 text-xl lg:text-lg text-center font-bold cursor-default select-none">
-        Graphize 🚀
-      </h1>
-      <div className="flex-1" ref={treeRef}>
-        <TreeRenderer
-          key={input}
-          nodes={state.nodes}
-          edges={state.edges}
-          width={width}
-          height={height}
-        />
-      </div>
       <Editor
         input={input}
         onChange={({ text, data }) => {
           setInput(text);
           setState(data);
         }}
-      />
+      >
+        <div className="flex-1" ref={treeRef}>
+          <TreeRenderer
+            key={input}
+            nodes={state.nodes}
+            edges={state.edges}
+            width={width}
+            height={height}
+          />
+        </div>
+      </Editor>
     </EventContextProvider>
   );
 }
