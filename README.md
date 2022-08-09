@@ -20,12 +20,12 @@ Visualize and download JSON / YAML content in your browser
 - Formatting for content editor
 - Download as PNG for reuse
 - Sharable URL
+- Copy node and specific child tree
 
 ### Roadmap
 
 - XML Support
 - Download SVG for Reuse
-- Copy child tree
 
 ## Credits
 

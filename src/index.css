@@ -37,3 +37,29 @@ body,
     stroke-dashoffset: 10;
   }
 }
+
+/* purgecss start ignore */
+div.react-contexify {
+  padding: 4px;
+  overflow: hidden;
+}
+.react-contexify.react-contexify__theme--graphize {
+  @apply bg-slate-900;
+}
+.react-contexify.react-contexify__theme--graphize .react-contexify__submenu {
+  @apply bg-slate-900;
+}
+.react-contexify.react-contexify__theme--graphize .react-contexify__separator {
+  @apply bg-slate-100;
+}
+.react-contexify.react-contexify__theme--graphize
+  .react-contexify__item:hover
+  .react-contexify__item__content {
+  @apply bg-rose-600;
+  @apply rounded;
+}
+.react-contexify.react-contexify__theme--graphize
+  .react-contexify__item__content {
+  @apply text-white;
+}
+/* purgecss end ignore */

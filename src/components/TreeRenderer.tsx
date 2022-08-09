@@ -63,10 +63,24 @@ const TreeRenderer = ({
       props: { data },
     });
   }
-  const handleItemClick = async ({ props }: any) => {
-    await navigator.clipboard.writeText(JSON.stringify(props.data || {}));
+
+  const copyNode = async ({ props }: any) => {
+    await navigator.clipboard.writeText(JSON.stringify(props.data.node || {}));
     Toastify({
-      text: "Copied to clipboard 🎉",
+      text: "Copied Node to clipboard 🎉",
+      duration: 2000,
+      gravity: "bottom",
+      position: "right",
+      style: {
+        background: "linear-gradient(135deg,#42E695,#3BB2B8)",
+      },
+    }).showToast();
+  };
+
+  const copyTree = async ({ props }: any) => {
+    await navigator.clipboard.writeText(JSON.stringify(props.data.tree || {}));
+    Toastify({
+      text: "Copied Tree to clipboard 🎉",
       duration: 2000,
       gravity: "bottom",
       position: "right",
@@ -144,8 +158,9 @@ const TreeRenderer = ({
           />
         </TransformComponent>
       </TransformWrapper>
-      <Menu id={NODE_MENU_ID}>
-        <Item onClick={handleItemClick}>Copy item</Item>
+      <Menu id={NODE_MENU_ID} theme="graphize">
+        <Item onClick={copyNode}>📦 Copy Node</Item>
+        <Item onClick={copyTree}>🎄 Copy Tree</Item>
       </Menu>
     </>
   );
