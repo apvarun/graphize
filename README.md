@@ -19,13 +19,13 @@ Visualize and download JSON / YAML content in your browser
 - Pinch / Scroll Zoom into the rendered image
 - Formatting for content editor
 - Download as PNG for reuse
+- Sharable URL
 
 ### Roadmap
 
 - XML Support
 - Download SVG for Reuse
 - Copy child tree
-- Save to URL
 
 ## Credits
 

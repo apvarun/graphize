@@ -8,6 +8,7 @@ import NightOwlTheme from "../assets/night-owl-theme.json";
 import EventContext from "../lib/EventContext";
 import parser from "../lib/parser";
 import { TreeState } from "../lib/types";
+import Dialog from "./Dialog";
 
 function Editor({
   input,
@@ -22,6 +23,8 @@ function Editor({
   const [text, setText] = useState(input);
 
   const eventContext = useContext(EventContext);
+
+  const [shareOptions, setShareOptions] = useState({ open: false, data: "" });
 
   useEffect(() => {
     loader.init().then((monaco) => {
@@ -66,6 +69,30 @@ function Editor({
     }
   };
 
+  const shareContent = () => {
+    let path = new URL(window.location.href);
+    path.searchParams.append("v", encodeURIComponent(input));
+
+    setShareOptions({
+      open: true,
+      data: path.toString(),
+    });
+  };
+
+  const copyShareContent = async () => {
+    await navigator.clipboard.writeText(shareOptions.data);
+
+    Toastify({
+      text: "Copied to clipboard 🎉",
+      duration: 2000,
+      gravity: "bottom",
+      position: "right",
+      style: {
+        background: "linear-gradient(135deg,#42E695,#3BB2B8)",
+      },
+    }).showToast();
+  };
+
   return (
     <>
       <div className="px-4 py-2 shadow mb-1 bg-white flex justify-between items-center border-b">
@@ -95,6 +122,27 @@ function Editor({
               <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
             </svg>
           </a>
+          <div className="w-px bg-slate-500" />
+          <button title="Share" onClick={shareContent}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+              fill="none"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <circle cx="6" cy="12" r="3" />
+              <circle cx="18" cy="6" r="3" />
+              <circle cx="18" cy="18" r="3" />
+              <line x1="8.7" y1="10.7" x2="15.3" y2="7.3" />
+              <line x1="8.7" y1="13.3" x2="15.3" y2="16.7" />
+            </svg>
+          </button>
           <div className="w-px bg-slate-500" />
           <button onClick={downloadGraph} title="Download Image">
             <svg
@@ -156,7 +204,7 @@ function Editor({
         <div className="w-full bg-slate-700 text-white h-screen p-4 flex flex-col">
           <div className="flex items-center justify-between">
             <h2 className="font-bold text-lg">Edit contents</h2>
-            <button onClick={() => setVisible(!visible)}>
+            <button onClick={() => setVisible(!visible)} title="Close Editor">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -197,6 +245,22 @@ function Editor({
           </button>
         </div>
       </div>
+
+      <Dialog
+        open={shareOptions.open}
+        title="Share the visualized content"
+        onClose={() => setShareOptions({ open: false, data: "" })}
+      >
+        <div className="flex flex-col items-start gap-2">
+          <p className="text-sm">Click the input box to copy the URL</p>
+          <div
+            className="whitespace-nowrap overflow-hidden bg-slate-200 text-slate-700 max-w-full cursor-pointer rounded border-8 border-slate-200"
+            onClick={copyShareContent}
+          >
+            {shareOptions.data}
+          </div>
+        </div>
+      </Dialog>
     </>
   );
 }

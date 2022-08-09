@@ -22,8 +22,23 @@ function App() {
     // @ts-ignore
     window.g = null;
 
-    const parsedData = parser(demoJson);
-    setState(parsedData);
+    let initialData = demoJson;
+    const search = window.location.search;
+    const params = new URLSearchParams(search);
+    const content = params.get("v");
+    if (content) {
+      const value = decodeURIComponent(content);
+      initialData = value;
+    }
+
+    try {
+      const parsedData = parser(initialData);
+      setState(parsedData);
+    } catch {
+      // Notify that the shared content is not valid
+      const parsedData = parser(demoJson);
+      setState(parsedData);
+    }
   }, []);
 
   useEffect(() => {
