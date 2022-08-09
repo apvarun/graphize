@@ -71,6 +71,7 @@ function Editor({
 
   const shareContent = () => {
     let path = new URL(window.location.href);
+    path.searchParams.delete("v");
     path.searchParams.append("v", encodeURIComponent(input));
 
     setShareOptions({
@@ -254,7 +255,7 @@ function Editor({
         <div className="flex flex-col items-start gap-2">
           <p className="text-sm">Click the input box to copy the URL</p>
           <div
-            className="whitespace-nowrap overflow-hidden bg-slate-200 text-slate-700 max-w-full cursor-pointer rounded border-8 border-slate-200"
+            className="whitespace-nowrap select-all overflow-hidden bg-slate-200 text-slate-700 max-w-full cursor-pointer rounded border-8 border-slate-200"
             onClick={copyShareContent}
           >
             {shareOptions.data}

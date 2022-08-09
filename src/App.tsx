@@ -34,6 +34,7 @@ function App() {
     try {
       const parsedData = parser(initialData);
       setState(parsedData);
+      setInput(initialData);
     } catch {
       // Notify that the shared content is not valid
       const parsedData = parser(demoJson);
