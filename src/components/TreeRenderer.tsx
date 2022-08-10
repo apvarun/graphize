@@ -19,6 +19,7 @@ const NODE_MENU_ID = "node-menu";
 const TreeRenderer = ({
   nodes,
   edges,
+  depth,
   width,
   height,
 }: TreeState & {
@@ -90,14 +91,14 @@ const TreeRenderer = ({
     }).showToast();
   };
 
-  if (nodes.length === 0 || edges.length === 0) return null;
+  if (nodes.length === 0 && edges.length === 0) return null;
 
   return (
     <>
       <TransformWrapper
         wheel={{ step: 0.1 }}
         limitToBounds={false}
-        maxScale={4}
+        maxScale={depth + 1}
         zoomAnimation={{
           animationType: "linear",
         }}

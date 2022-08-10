@@ -55,8 +55,7 @@ function Editor({
         data: parsedData,
       });
       setVisible(false);
-    } catch {
-      console.log("Error");
+    } catch (err) {
       Toastify({
         text: "Not valid JSON/YAML content.",
         duration: 2000,

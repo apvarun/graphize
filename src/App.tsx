@@ -13,6 +13,7 @@ function App() {
   const [state, setState] = useState<TreeState>({
     nodes: [],
     edges: [],
+    depth: 1,
   });
   const treeRef = useRef<HTMLDivElement>(null);
 
@@ -59,13 +60,7 @@ function App() {
         }}
       >
         <div className="flex-1" ref={treeRef}>
-          <TreeRenderer
-            key={input}
-            nodes={state.nodes}
-            edges={state.edges}
-            width={width}
-            height={height}
-          />
+          <TreeRenderer key={input} width={width} height={height} {...state} />
         </div>
       </Editor>
     </EventContextProvider>

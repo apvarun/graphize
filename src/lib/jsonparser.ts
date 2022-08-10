@@ -24,6 +24,8 @@ const jsonparser = (jsonStr: string) => {
   const nodes: NodeData<any>[] = [];
   const edges: EdgeData<any>[] = [];
 
+  let depth = 1;
+
   const json = JSON.parse(jsonStr);
 
   function addNode(text: string, id: string, data: { node: any; tree: any }) {
@@ -38,8 +40,19 @@ const jsonparser = (jsonStr: string) => {
     });
   }
 
-  function nodeParser(obj: any, id: number, from?: number) {
-    if (STATIC_TYPES.includes(typeof obj)) {
+  function nodeParser(obj: any, id: number, dep: number, from?: number) {
+    depth = Math.max(depth, dep);
+
+    if (obj === null) {
+      addNode("null", String(id), { node: "null", tree: "null" });
+      if (from) {
+        edges.push({
+          id: `${from}-${id}`,
+          from: String(from),
+          to: String(id),
+        });
+      }
+    } else if (STATIC_TYPES.includes(typeof obj)) {
       addNode(obj, String(id), { node: obj, tree: obj });
       if (from) {
         edges.push({
@@ -51,11 +64,11 @@ const jsonparser = (jsonStr: string) => {
     } else if (Array.isArray(obj)) {
       obj.forEach((value) => {
         id++;
-        id = nodeParser(value, id, from);
+        id = nodeParser(value, id, dep + 1, from);
       });
     } else {
       const staticKeys = Object.entries(obj)
-        .filter(([_, value]) => STATIC_TYPES.includes(typeof value))
+        .filter(([_, value]) => STATIC_TYPES.includes(typeof value) || value === null)
         .map(([key]) => key)
         .sort();
 
@@ -65,6 +78,10 @@ const jsonparser = (jsonStr: string) => {
         if (text) text += "\n";
 
         data[key] = obj[key];
+
+        if (data[key] === null) {
+          data[key] = "null";
+        }
 
         text += `${key}: ${obj[key]}`;
       });
@@ -81,7 +98,9 @@ const jsonparser = (jsonStr: string) => {
 
       // Nested Types
       const nonStaticKeys = Object.entries(obj)
-        .filter(([_, value]) => !STATIC_TYPES.includes(typeof value))
+        .filter(
+          ([_, value]) => !STATIC_TYPES.includes(typeof value) && value !== null
+        )
         .map(([key]) => key)
         .sort();
 
@@ -95,16 +114,16 @@ const jsonparser = (jsonStr: string) => {
           from: String(oldId),
           to: String(id),
         });
-        id = nodeParser(obj[key], id + 1, id);
+        id = nodeParser(obj[key], id + 1, dep + 1, id);
       });
     }
 
     return id;
   }
 
-  nodeParser(json, 1);
+  nodeParser(json, 1, depth);
 
-  return { nodes, edges };
+  return { nodes, edges, depth };
 };
 
 export default jsonparser;
