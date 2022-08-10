@@ -1,4 +1,11 @@
-import { Canvas, Edge, MarkerArrow, Node, CanvasRef } from "reaflow";
+import {
+  Canvas,
+  Edge,
+  MarkerArrow,
+  Node,
+  CanvasRef,
+  CanvasDirection,
+} from "reaflow";
 import { useCallback, useContext, useEffect, useRef, useState } from "react";
 import { TreeState } from "../lib/types";
 import {
@@ -22,9 +29,11 @@ const TreeRenderer = ({
   depth,
   width,
   height,
+  direction,
 }: TreeState & {
   width: number;
   height: number;
+  direction: CanvasDirection;
 }) => {
   const [paneWidth, setPaneWidth] = useState(2000);
   const [paneHeight, setPaneHeight] = useState(2000);
@@ -106,6 +115,7 @@ const TreeRenderer = ({
       >
         <TransformComponent>
           <Canvas
+            key={direction}
             className="canvas"
             nodes={nodes}
             edges={edges}
@@ -156,6 +166,7 @@ const TreeRenderer = ({
             width={width}
             height={height}
             zoomable={false}
+            direction={direction}
           />
         </TransformComponent>
       </TransformWrapper>

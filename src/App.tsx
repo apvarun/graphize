@@ -6,6 +6,7 @@ import parser from "./lib/parser";
 import { TreeState } from "./lib/types";
 import demoJson from "./assets/demoJson";
 import { EventContextProvider } from "./lib/EventContext";
+import { CanvasDirection } from "reaflow";
 
 function App() {
   const [input, setInput] = useState(demoJson);
@@ -15,6 +16,7 @@ function App() {
     edges: [],
     depth: 1,
   });
+  const [direction, setDirection] = useState<CanvasDirection>("DOWN");
   const treeRef = useRef<HTMLDivElement>(null);
 
   const [[width, height], setSize] = useState([200, 200]);
@@ -58,9 +60,17 @@ function App() {
           setInput(text);
           setState(data);
         }}
+        direction={direction}
+        onDirectionChange={setDirection}
       >
         <div className="flex-1" ref={treeRef}>
-          <TreeRenderer key={input} width={width} height={height} {...state} />
+          <TreeRenderer
+            key={input}
+            width={width}
+            height={height}
+            direction={direction}
+            {...state}
+          />
         </div>
       </Editor>
     </EventContextProvider>

@@ -9,15 +9,27 @@ import EventContext from "../lib/EventContext";
 import parser from "../lib/parser";
 import { TreeState } from "../lib/types";
 import Dialog from "./Dialog";
+import { CanvasDirection } from "reaflow";
+
+const CANVAS_DIRECTION_ORDER: CanvasDirection[] = [
+  "DOWN",
+  "LEFT",
+  "UP",
+  "RIGHT",
+];
 
 function Editor({
   input,
   onChange,
   children,
+  direction,
+  onDirectionChange,
 }: {
   input: string;
   onChange: (value: { text: string; data: TreeState }) => void;
   children: React.ReactNode;
+  direction: CanvasDirection;
+  onDirectionChange: (value: CanvasDirection) => void;
 }) {
   const [visible, setVisible] = useState(false);
   const [text, setText] = useState(input);
@@ -93,6 +105,12 @@ function Editor({
     }).showToast();
   };
 
+  const rotate = () => {
+    const idx = CANVAS_DIRECTION_ORDER.indexOf(direction) + 1;
+
+    onDirectionChange(CANVAS_DIRECTION_ORDER[idx % 4]);
+  };
+
   return (
     <>
       <div className="px-4 py-2 shadow mb-1 bg-white flex justify-between items-center border-b">
@@ -122,6 +140,24 @@ function Editor({
               <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
             </svg>
           </a>
+          <div className="w-px bg-slate-500" />
+          <button title="Rotate" onClick={rotate}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="rotate-90"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+              fill="none"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M4.05 11a8 8 0 1 1 .5 4m-.5 5v-5h5" />
+            </svg>
+          </button>
           <div className="w-px bg-slate-500" />
           <button title="Share" onClick={shareContent}>
             <svg
