@@ -1,6 +1,7 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, lazy } from "react";
 
-import TreeRenderer from "./components/TreeRenderer";
+const TreeRenderer = lazy(() => import("./components/TreeRenderer"));
+
 import Editor from "./components/Editor";
 import parser from "./lib/parser";
 import { TreeState } from "./lib/types";

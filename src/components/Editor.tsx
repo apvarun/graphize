@@ -1,8 +1,10 @@
-import { useContext, useEffect, useState } from "react";
-import MonacoEditor, { loader } from "@monaco-editor/react";
+import { useContext, useEffect, useState, lazy } from "react";
+import loader from "@monaco-editor/loader";
 import download from "downloadjs";
 import { toPng } from "html-to-image";
 import Toastify from "toastify-js";
+
+const MonacoEditor = lazy(() => import("@monaco-editor/react"));
 
 import NightOwlTheme from "../assets/night-owl-theme.json";
 import EventContext from "../lib/EventContext";
@@ -69,7 +71,7 @@ function Editor({
       setVisible(false);
     } catch (err) {
       Toastify({
-        text: "Not valid JSON/YAML content.",
+        text: "Not valid JSON/YAML/XML content.",
         duration: 2000,
         gravity: "top",
         position: "right",
@@ -259,12 +261,13 @@ function Editor({
             </button>
           </div>
           <p className="mb-2 text-slate-400">
-            Replace the demo content with your own JSON/YAML
+            Replace the demo content with your own JSON/YAML/XML
           </p>
           <div className="w-full flex-1">
             <MonacoEditor
               theme="night-owl"
               height="100%"
+              language=""
               defaultLanguage="json"
               defaultValue={text}
               onChange={(value) => (value ? setText(value) : null)}

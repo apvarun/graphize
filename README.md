@@ -1,6 +1,6 @@
 # Graphize 🚀
 
-Visualize and download JSON / YAML content in your browser
+Visualize and download JSON / YAML / XML content in your browser
 
 ![GitHub](https://img.shields.io/github/license/apvarun/graphize)
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/apvarun/graphize/GH-Pages%20deployment)
@@ -15,7 +15,7 @@ Visualize and download JSON / YAML content in your browser
 
 ## Key Features
 
-- Preview your JSON / YAML documents instantly
+- Preview your JSON / YAML / XML documents instantly
 - Pinch / Scroll Zoom into the rendered image
 - Formatting for content editor
 - Download as PNG for reuse
@@ -24,7 +24,6 @@ Visualize and download JSON / YAML content in your browser
 
 ### Roadmap
 
-- XML Support
 - Download SVG for Reuse
 
 ## Credits
