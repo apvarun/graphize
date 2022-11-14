@@ -54,7 +54,7 @@
     "@types/yamljs": "^0.2.31",
     "autoprefixer": "^10.4.8",
     "buffer": "^6.0.3",
-    "elkjs": "^0.8.1",
+    "elkjs": "^0.8.2",
     "events": "^3.3.0",
     "gh-pages": "^4.0.0",
     "parcel": "^2.7.0",
