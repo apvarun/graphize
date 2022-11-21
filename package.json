@@ -52,7 +52,7 @@
     "@types/react-dom": "^18.0.6",
     "@types/toastify-js": "^1.11.1",
     "@types/yamljs": "^0.2.31",
-    "autoprefixer": "^10.4.8",
+    "autoprefixer": "^10.4.13",
     "buffer": "^6.0.3",
     "elkjs": "^0.8.2",
     "events": "^3.3.0",
