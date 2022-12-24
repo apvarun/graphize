@@ -3,7 +3,7 @@
 Visualize and download JSON / YAML / XML content in your browser
 
 ![GitHub](https://img.shields.io/github/license/apvarun/graphize)
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/apvarun/graphize/GH-Pages%20deployment)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/apvarun/graphize/gh-pages.yml)
 [![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 [![TypeScript](https://badgen.net/badge/icon/typescript?icon=typescript&label)](https://typescriptlang.org)
 
