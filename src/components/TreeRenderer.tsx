@@ -69,7 +69,8 @@ const TreeRenderer = ({
   function handleContextMenu(event: TriggerEvent, data: any) {
     event.preventDefault();
 
-    show(event, {
+    show({
+      event,
       props: { data },
     });
   }
