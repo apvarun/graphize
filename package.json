@@ -32,7 +32,7 @@
     "downloadjs": "^1.4.7",
     "fast-xml-parser": "^4.0.11",
     "html-to-image": "^1.11.1",
-    "monaco-editor": "0.31.0",
+    "monaco-editor": "0.34.1",
     "react": "^18.2.0",
     "react-contexify": "^5.0.0",
     "react-dom": "^18.2.0",
