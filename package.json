@@ -56,7 +56,7 @@
     "buffer": "^6.0.3",
     "elkjs": "^0.8.2",
     "events": "^3.3.0",
-    "gh-pages": "^4.0.0",
+    "gh-pages": "^5.0.0",
     "parcel": "^2.7.0",
     "postcss": "^8.4.21",
     "process": "^0.11.10",
