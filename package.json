@@ -42,7 +42,7 @@
     "yamljs": "^0.3.0"
   },
   "devDependencies": {
-    "@parcel/compressor-brotli": "^2.7.0",
+    "@parcel/compressor-brotli": "^2.10.0",
     "@parcel/compressor-gzip": "^2.7.0",
     "@parcel/optimizer-esbuild": "^2.10.0",
     "@parcel/packager-raw-url": "^2.7.0",
