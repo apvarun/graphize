@@ -47,7 +47,7 @@
     "@parcel/optimizer-esbuild": "^2.10.0",
     "@parcel/packager-raw-url": "^2.10.0",
     "@parcel/transformer-webmanifest": "^2.10.0",
-    "@types/downloadjs": "^1.4.3",
+    "@types/downloadjs": "^1.4.5",
     "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.9",
     "@types/toastify-js": "^1.11.1",
