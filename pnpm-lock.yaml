@@ -4,7 +4,8 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-packageExtensionsChecksum: 874980ef48739e6e4e9dc3c32a56bea7
+overrides:
+  rdk: 6.4.4
 
 dependencies:
   '@monaco-editor/loader':
@@ -26,8 +27,8 @@ dependencies:
     specifier: ^0.44.0
     version: 0.44.0
   rdk:
-    specifier: 6.5.0
-    version: 6.5.0(react-dom@18.2.0)(react@18.2.0)
+    specifier: 6.4.4
+    version: 6.4.4(react-dom@18.2.0)(react@18.2.0)
   react:
     specifier: ^18.2.0
     version: 18.2.0
@@ -310,7 +311,7 @@ packages:
       '@motionone/easing': 10.16.3
       '@motionone/types': 10.16.3
       '@motionone/utils': 10.16.3
-      tslib: 2.4.0
+      tslib: 2.6.2
     dev: false
 
   /@motionone/dom@10.16.4:
@@ -321,14 +322,14 @@ packages:
       '@motionone/types': 10.16.3
       '@motionone/utils': 10.16.3
       hey-listen: 1.0.8
-      tslib: 2.4.0
+      tslib: 2.6.2
     dev: false
 
   /@motionone/easing@10.16.3:
     resolution: {integrity: sha512-HWTMZbTmZojzwEuKT/xCdvoMPXjYSyQvuVM6jmM0yoGU6BWzsmYMeB4bn38UFf618fJCNtP9XeC/zxtKWfbr0w==}
     dependencies:
       '@motionone/utils': 10.16.3
-      tslib: 2.4.0
+      tslib: 2.6.2
     dev: false
 
   /@motionone/generators@10.16.4:
@@ -336,7 +337,7 @@ packages:
     dependencies:
       '@motionone/types': 10.16.3
       '@motionone/utils': 10.16.3
-      tslib: 2.4.0
+      tslib: 2.6.2
     dev: false
 
   /@motionone/types@10.16.3:
@@ -348,7 +349,7 @@ packages:
     dependencies:
       '@motionone/types': 10.16.3
       hey-listen: 1.0.8
-      tslib: 2.4.0
+      tslib: 2.6.2
     dev: false
 
   /@msgpackr-extract/msgpackr-extract-darwin-arm64@3.0.2:
@@ -3335,8 +3336,8 @@ packages:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
     dev: true
 
-  /rdk@6.5.0(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-Jrv4YFVH07JI03wxwsQhosypdyqOHirzNU0pfmteIfylhSpaIi8VnAp3MbznD3/ZKZyt6YRj0kMtQopTwIxMUw==}
+  /rdk@6.4.4(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-8ix2MSQxPP9cElSfPRt3bmAIgSPC/sN164YJD/R22Kbo+GFEbVYnfJUggbUTHYodt7TCEV/BV/gFUPl12A4dGg==}
     peerDependencies:
       react: '>=16'
       react-dom: '>=16'
@@ -3456,7 +3457,7 @@ packages:
       kld-affine: 2.1.1
       kld-intersections: 0.7.0
       p-cancelable: 3.0.0
-      rdk: 6.5.0(react-dom@18.2.0)(react@18.2.0)
+      rdk: 6.4.4(react-dom@18.2.0)(react@18.2.0)
       react: 18.2.0
       react-cool-dimensions: 2.0.7(react@18.2.0)
       react-dom: 18.2.0(react@18.2.0)
@@ -3819,7 +3820,6 @@ packages:
 
   /tslib@2.6.2:
     resolution: {integrity: sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==}
-    dev: true
 
   /type-fest@0.20.2:
     resolution: {integrity: sha512-Ne+eE4r0/iWnpAxD852z3A+N0Bt5RN//NjJwRd2VFHEmrywxf5vsZlh4R6lixl6B+wz/8d+maTSAkN1FIkI3LQ==}
