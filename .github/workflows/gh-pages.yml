@@ -27,13 +27,16 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
+    - name: Setup pnpm
+      uses: pnpm/action-setup@v2.4.0
+
     - name: Install Packages
       run: |
-        npm install --force
+        pnpm install --force
 
     - name: Build Project
       run: |
-        npm run build
+        pnpm run build
       
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
