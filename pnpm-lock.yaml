@@ -42,8 +42,8 @@ dependencies:
     specifier: ^3.3.0
     version: 3.3.0(react-dom@18.2.0)(react@18.2.0)
   reaflow:
-    specifier: ^5.2.6
-    version: 5.2.6(react-dom@18.2.0)(react@18.2.0)
+    specifier: ^5.2.7
+    version: 5.2.7(react-dom@18.2.0)(react@18.2.0)
   toastify-js:
     specifier: ^1.12.0
     version: 1.12.0
@@ -3441,8 +3441,8 @@ packages:
       picomatch: 2.3.1
     dev: true
 
-  /reaflow@5.2.6(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-jurx9X7CLYR7SI5len9uAhoyKWHNzu6gzn9NJWLFKeUHpvCC4CUBMvh4jXL1qPQJpV0kt6OGbiZREnpQvZ6G8A==}
+  /reaflow@5.2.7(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-5TrZWHarclyFNWi+ecrhrYzlN+WIO2muKJcscFZbH7/JfK6GPNbs3JBju/Un90a6i/4M6yUi15SUraCl8gzVjg==}
     peerDependencies:
       react: '>=16'
       react-dom: '>=16'
