@@ -5,7 +5,7 @@ settings:
   excludeLinksFromLockfile: false
 
 overrides:
-  rdk: 6.4.4
+  rdk: 6.6.0
 
 dependencies:
   '@monaco-editor/loader':
@@ -27,8 +27,8 @@ dependencies:
     specifier: ^0.44.0
     version: 0.44.0
   rdk:
-    specifier: 6.4.4
-    version: 6.4.4(react-dom@18.2.0)(react@18.2.0)
+    specifier: 6.6.0
+    version: 6.6.0(react-dom@18.2.0)(react@18.2.0)
   react:
     specifier: ^18.2.0
     version: 18.2.0
@@ -2262,23 +2262,26 @@ packages:
     resolution: {integrity: sha512-ZsDfxO51wGAXREY55a7la9LScWpwv9RxIrYABrlvOFBlH/ShPnrtsXeuUIfXKKOVicNxQ+o8JTbJvjS4M89yew==}
     dev: true
 
-  /framer-motion@7.10.3(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-k2ccYeZNSpPg//HTaqrU+4pRq9f9ZpaaN7rr0+Rx5zA4wZLbk547wtDzge2db1sB+1mnJ6r59P4xb+aEIi/W+w==}
+  /framer-motion@10.16.16(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-je6j91rd7NmUX7L1XHouwJ4v3R+SO4umso2LUcgOct3rHZ0PajZ80ETYZTajzEXEl9DlKyzjyt4AvGQ+lrebOw==}
     peerDependencies:
       react: ^18.0.0
       react-dom: ^18.0.0
+    peerDependenciesMeta:
+      react:
+        optional: true
+      react-dom:
+        optional: true
     dependencies:
-      '@motionone/dom': 10.16.4
-      hey-listen: 1.0.8
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
-      tslib: 2.4.0
+      tslib: 2.6.2
     optionalDependencies:
       '@emotion/is-prop-valid': 0.8.8
     dev: false
 
-  /framer-motion@7.8.0(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-Yzbc0RGzKnkdRxPZbJIVtizX40hLGErXBRI6Uz1WE0OLNZpZqqZa9HaI/sdAhrx4215uczQ+m3C9PA+pwHf+gA==}
+  /framer-motion@7.10.3(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-k2ccYeZNSpPg//HTaqrU+4pRq9f9ZpaaN7rr0+Rx5zA4wZLbk547wtDzge2db1sB+1mnJ6r59P4xb+aEIi/W+w==}
     peerDependencies:
       react: ^18.0.0
       react-dom: ^18.0.0
@@ -3336,15 +3339,15 @@ packages:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
     dev: true
 
-  /rdk@6.4.4(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-8ix2MSQxPP9cElSfPRt3bmAIgSPC/sN164YJD/R22Kbo+GFEbVYnfJUggbUTHYodt7TCEV/BV/gFUPl12A4dGg==}
+  /rdk@6.6.0(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-c+j6GNRVNri0kXassZjR5FGsVKn1/m7Sgafr2JDoV4eeXwNNaU+XVv46TwZLYSL29OhKuov6EJd0BCl6gY6sAg==}
     peerDependencies:
       react: '>=16'
       react-dom: '>=16'
     dependencies:
       body-scroll-lock: 4.0.0-beta.0
       classnames: 2.3.2
-      framer-motion: 7.8.0(react-dom@18.2.0)(react@18.2.0)
+      framer-motion: 10.16.16(react-dom@18.2.0)(react@18.2.0)
       popper.js: 1.16.1
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
@@ -3457,7 +3460,7 @@ packages:
       kld-affine: 2.1.1
       kld-intersections: 0.7.0
       p-cancelable: 3.0.0
-      rdk: 6.4.4(react-dom@18.2.0)(react@18.2.0)
+      rdk: 6.6.0(react-dom@18.2.0)(react@18.2.0)
       react: 18.2.0
       react-cool-dimensions: 2.0.7(react@18.2.0)
       react-dom: 18.2.0(react@18.2.0)
