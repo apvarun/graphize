@@ -39,8 +39,8 @@ dependencies:
     specifier: ^18.2.0
     version: 18.2.0(react@18.2.0)
   react-zoom-pan-pinch:
-    specifier: ^3.3.0
-    version: 3.3.0(react-dom@18.2.0)(react@18.2.0)
+    specifier: ^3.4.2
+    version: 3.4.2(react-dom@18.2.0)(react@18.2.0)
   reaflow:
     specifier: ^5.2.8
     version: 5.2.8(react-dom@18.2.0)(react@18.2.0)
@@ -3540,8 +3540,8 @@ packages:
       react: 18.2.0
     dev: false
 
-  /react-zoom-pan-pinch@3.3.0(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-vy1h8aenDzXye+HRqANZaSA8IPHoqOiuDPFBkswoyPUH8uMfsmbeH6gFI4r4BhEJa0xIlcA+FbvhidRWKGUrOg==}
+  /react-zoom-pan-pinch@3.4.2(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-Gg44aKCmfO4d19TmPaswwUeBtJkizR45YXxRd3MMK7FIINuSyqBF5/jDYPMZbMSjTvOI3v1p0FfKtebkTamP+w==}
     engines: {node: '>=8', npm: '>=5'}
     peerDependencies:
       react: '*'
