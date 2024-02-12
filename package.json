@@ -52,7 +52,7 @@
     "@parcel/transformer-webmanifest": "^2.11.0",
     "@types/downloadjs": "^1.4.6",
     "@types/react": "^18.2.52",
-    "@types/react-dom": "^18.2.18",
+    "@types/react-dom": "^18.2.19",
     "@types/toastify-js": "^1.12.3",
     "@types/yamljs": "^0.2.34",
     "autoprefixer": "^10.4.17",
