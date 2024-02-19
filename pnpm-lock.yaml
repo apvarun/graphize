@@ -74,8 +74,8 @@ devDependencies:
     specifier: ^1.4.6
     version: 1.4.6
   '@types/react':
-    specifier: ^18.2.55
-    version: 18.2.55
+    specifier: ^18.2.56
+    version: 18.2.56
   '@types/react-dom':
     specifier: ^18.2.19
     version: 18.2.19
@@ -1456,11 +1456,11 @@ packages:
   /@types/react-dom@18.2.19:
     resolution: {integrity: sha512-aZvQL6uUbIJpjZk4U8JZGbau9KDeAwMfmhyWorxgBkqDIEf6ROjRozcmPIicqsUwPUjbkDfHKgGee1Lq65APcA==}
     dependencies:
-      '@types/react': 18.2.55
+      '@types/react': 18.2.56
     dev: true
 
-  /@types/react@18.2.55:
-    resolution: {integrity: sha512-Y2Tz5P4yz23brwm2d7jNon39qoAtMMmalOQv6+fEFt1mT+FcM3D841wDpoUvFXhaYenuROCy3FZYqdTjM7qVyA==}
+  /@types/react@18.2.56:
+    resolution: {integrity: sha512-NpwHDMkS/EFZF2dONFQHgkPRwhvgq/OAvIaGQzxGSBmaeR++kTg6njr15Vatz0/2VcCEwJQFi6Jf4Q0qBu0rLA==}
     dependencies:
       '@types/prop-types': 15.7.11
       '@types/scheduler': 0.16.8
@@ -3247,9 +3247,6 @@ packages:
     resolution: {integrity: sha512-H/RI1/DmuOkL8RuG/EpNPvtzrbF+7jA/R56ydEEm+lqFbYktKB4COR7JXdHkZXRgbSJyimrFB8d0r9+SaRnj0Q==}
     engines: {node: '>= 12.0.0'}
     hasBin: true
-    peerDependenciesMeta:
-      '@parcel/core':
-        optional: true
     dependencies:
       '@parcel/config-default': 2.11.0(@parcel/core@2.11.0)(postcss@8.4.35)(typescript@5.3.3)
       '@parcel/core': 2.11.0
