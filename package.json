@@ -51,7 +51,7 @@
     "@parcel/packager-raw-url": "^2.11.0",
     "@parcel/transformer-webmanifest": "^2.11.0",
     "@types/downloadjs": "^1.4.6",
-    "@types/react": "^18.2.55",
+    "@types/react": "^18.2.56",
     "@types/react-dom": "^18.2.19",
     "@types/toastify-js": "^1.12.3",
     "@types/yamljs": "^0.2.34",
