@@ -92,8 +92,8 @@ devDependencies:
     specifier: ^6.0.3
     version: 6.0.3
   elkjs:
-    specifier: ^0.9.1
-    version: 0.9.1
+    specifier: ^0.9.2
+    version: 0.9.2
   events:
     specifier: ^3.3.0
     version: 3.3.0
@@ -1985,8 +1985,8 @@ packages:
     resolution: {integrity: sha512-L6uRgvZTH+4OF5NE/MBbzQx/WYpru1xCBE9respNj6qznEewGUIfhzmm7horWWxbNO2M0WckQypGctR8lH79xQ==}
     dev: false
 
-  /elkjs@0.9.1:
-    resolution: {integrity: sha512-JWKDyqAdltuUcyxaECtYG6H4sqysXSLeoXuGUBfRNESMTkj+w+qdb0jya8Z/WI0jVd03WQtCGhS6FOFtlhD5FQ==}
+  /elkjs@0.9.2:
+    resolution: {integrity: sha512-2Y/RaA1pdgSHpY0YG4TYuYCD2wh97CRvu22eLG3Kz0pgQ/6KbIFTxsTnDc4MH/6hFlg2L/9qXrDMG0nMjP63iw==}
     dev: true
 
   /ellipsize@0.2.0:
