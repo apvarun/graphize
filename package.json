@@ -34,7 +34,7 @@
     "fast-xml-parser": "^4.3.5",
     "html-to-image": "^1.11.11",
     "monaco-editor": "^0.46.0",
-    "rdk": "6.6.0",
+    "rdk": "6.6.2",
     "react": "^18.2.0",
     "react-contexify": "^6.0.0",
     "react-dom": "^18.2.0",
@@ -71,7 +71,7 @@
   },
   "pnpm": {
     "overrides": {
-      "rdk": "6.4.4"
+      "rdk": "6.6.2"
     }
   }
 }
