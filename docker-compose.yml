@@ -1,0 +1,9 @@
+services:
+  graphize:
+    container_name: graphize
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    ports:
+      - 3000:3000

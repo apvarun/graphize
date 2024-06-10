@@ -23,7 +23,7 @@
   "scripts": {
     "dev": "parcel",
     "prebuild": "rm -rf dist",
-    "build": "parcel build --no-source-maps --public-url https://apvarun.github.io/graphize/",
+    "build": "parcel build --no-source-maps",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
