@@ -42,8 +42,8 @@ importers:
         specifier: ^18.3.1
         version: 18.3.1(react@18.3.1)
       react-zoom-pan-pinch:
-        specifier: ^3.6.0
-        version: 3.6.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: ^3.6.1
+        version: 3.6.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       reaflow:
         specifier: ^5.2.12
         version: 5.2.12(@emotion/is-prop-valid@0.8.8)(@types/react@18.3.3)(prop-types@15.8.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -2062,8 +2062,8 @@ packages:
     peerDependencies:
       react: '>= 16.8.0'
 
-  react-zoom-pan-pinch@3.6.0:
-    resolution: {integrity: sha512-qLAFbDmlRwwJ7F3KXIoT5zxVZD34ZO0a5jI65URmTUjthapoQ0UCAF8oxpSJV0bSVszI5T3WV/U4Jd6ypwOnAQ==}
+  react-zoom-pan-pinch@3.6.1:
+    resolution: {integrity: sha512-SdPqdk7QDSV7u/WulkFOi+cnza8rEZ0XX4ZpeH7vx3UZEg7DoyuAy3MCmm+BWv/idPQL2Oe73VoC0EhfCN+sZQ==}
     engines: {node: '>=8', npm: '>=5'}
     peerDependencies:
       react: '*'
@@ -4663,7 +4663,7 @@ snapshots:
     dependencies:
       react: 18.3.1
 
-  react-zoom-pan-pinch@3.6.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+  react-zoom-pan-pinch@3.6.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
