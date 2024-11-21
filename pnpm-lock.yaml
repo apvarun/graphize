@@ -70,8 +70,8 @@ importers:
         specifier: ^2.12.0
         version: 2.12.0(@parcel/core@2.13.0(@swc/helpers@0.5.11))(@swc/helpers@0.5.11)
       '@parcel/transformer-webmanifest':
-        specifier: ^2.12.0
-        version: 2.12.0(@parcel/core@2.13.0(@swc/helpers@0.5.11))(@swc/helpers@0.5.11)
+        specifier: ^2.13.0
+        version: 2.13.0(@parcel/core@2.13.0(@swc/helpers@0.5.11))
       '@types/downloadjs':
         specifier: ^1.4.6
         version: 1.4.6
@@ -752,9 +752,9 @@ packages:
     resolution: {integrity: sha512-9lV9ab6TBBs1GQhNcgs9IwpdqvWnfOeZiORqGH7aSpiAaTy9w9Nm+1hSycK5Fz4EZ9wavvdcHftf0LGyymK2MQ==}
     engines: {node: '>= 16.0.0', parcel: ^2.13.0}
 
-  '@parcel/transformer-webmanifest@2.12.0':
-    resolution: {integrity: sha512-suiUv9DDEpyryHtzahbIeJSZTIeE/t4cdrU0Ikb/O46wsy5RLo59nE4E6TGWM84R7fQO8m/MhzeQM5Y3NV6jKg==}
-    engines: {parcel: ^2.12.0}
+  '@parcel/transformer-webmanifest@2.13.0':
+    resolution: {integrity: sha512-JoIE8fIg2kA61qTtQdMS8jaU7/YmKP3DUl1IPEbEs2D6I09TRipTvHPtwjAh/GXv8Q4ybuWZF266b1HvpydBKg==}
+    engines: {parcel: ^2.13.0}
 
   '@parcel/types-internal@2.13.0':
     resolution: {integrity: sha512-yhIbaH+VXQB7Leifsnwifr80R6q2Yqeo+xN4KcPGuGH94iX7LrxJ3V0iwUMIg5nGmh5hmNbq0MEYFFxqVuZ8wQ==}
@@ -3958,15 +3958,14 @@ snapshots:
     transitivePeerDependencies:
       - '@parcel/core'
 
-  '@parcel/transformer-webmanifest@2.12.0(@parcel/core@2.13.0(@swc/helpers@0.5.11))(@swc/helpers@0.5.11)':
+  '@parcel/transformer-webmanifest@2.13.0(@parcel/core@2.13.0(@swc/helpers@0.5.11))':
     dependencies:
       '@mischnic/json-sourcemap': 0.1.1
-      '@parcel/diagnostic': 2.12.0
-      '@parcel/plugin': 2.12.0(@parcel/core@2.13.0(@swc/helpers@0.5.11))(@swc/helpers@0.5.11)
-      '@parcel/utils': 2.12.0
+      '@parcel/diagnostic': 2.13.0
+      '@parcel/plugin': 2.13.0(@parcel/core@2.13.0(@swc/helpers@0.5.11))
+      '@parcel/utils': 2.13.0
     transitivePeerDependencies:
       - '@parcel/core'
-      - '@swc/helpers'
 
   '@parcel/types-internal@2.13.0':
     dependencies:

@@ -49,7 +49,7 @@
     "@parcel/config-default": "^2.12.0",
     "@parcel/optimizer-esbuild": "^2.12.0",
     "@parcel/packager-raw-url": "^2.12.0",
-    "@parcel/transformer-webmanifest": "^2.12.0",
+    "@parcel/transformer-webmanifest": "^2.13.0",
     "@types/downloadjs": "^1.4.6",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
