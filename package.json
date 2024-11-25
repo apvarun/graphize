@@ -46,7 +46,7 @@
   "devDependencies": {
     "@parcel/compressor-brotli": "^2.13.0",
     "@parcel/compressor-gzip": "^2.12.0",
-    "@parcel/config-default": "^2.12.0",
+    "@parcel/config-default": "^2.13.0",
     "@parcel/optimizer-esbuild": "^2.12.0",
     "@parcel/packager-raw-url": "^2.13.0",
     "@parcel/transformer-webmanifest": "^2.13.0",
