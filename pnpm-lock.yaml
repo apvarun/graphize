@@ -58,8 +58,8 @@ importers:
         specifier: ^2.13.0
         version: 2.13.0(@parcel/core@2.13.0(@swc/helpers@0.5.11))
       '@parcel/compressor-gzip':
-        specifier: ^2.12.0
-        version: 2.12.0(@parcel/core@2.13.0(@swc/helpers@0.5.11))(@swc/helpers@0.5.11)
+        specifier: ^2.13.2
+        version: 2.13.2(@parcel/core@2.13.0(@swc/helpers@0.5.11))
       '@parcel/config-default':
         specifier: ^2.12.0
         version: 2.12.0(@parcel/core@2.13.0(@swc/helpers@0.5.11))(@swc/helpers@0.5.11)(postcss@8.4.49)(typescript@5.6.3)
@@ -510,9 +510,9 @@ packages:
     resolution: {integrity: sha512-q00c/i+hqZR8eXqgiOLoi8e2ZfPZxMCPw8ExhQzdOuZibDESbQK/xjGpo7kp0FZtvD6DMzFRUt9bnjTrbuYhLA==}
     engines: {node: '>= 16.0.0', parcel: ^2.13.0}
 
-  '@parcel/compressor-gzip@2.12.0':
-    resolution: {integrity: sha512-5olysAPy/gq1bCeNAF5eLhF9VIR8Rl2jW0H6+i8AzM4oKeMLhnRoVOPjas7ZrAkPcbKEq9/AnRTYvN54eZgf8g==}
-    engines: {node: '>= 12.0.0', parcel: ^2.12.0}
+  '@parcel/compressor-gzip@2.13.2':
+    resolution: {integrity: sha512-AmklSErtum7s4A0YgfI/k0BzR66nvZOOP5X25SemBhLB0I5yX16WTGr+CSlEFTIUma/MZloTvXVmRG/IchqI8g==}
+    engines: {node: '>= 16.0.0', parcel: ^2.13.2}
 
   '@parcel/compressor-raw@2.12.0':
     resolution: {integrity: sha512-h41Q3X7ZAQ9wbQ2csP8QGrwepasLZdXiuEdpUryDce6rF9ZiHoJ97MRpdLxOhOPyASTw/xDgE1xyaPQr0Q3f5A==}
@@ -3166,15 +3166,13 @@ snapshots:
     transitivePeerDependencies:
       - '@parcel/core'
 
-  '@parcel/cache@2.12.0(@parcel/core@2.13.0(@swc/helpers@0.5.11))(@swc/helpers@0.5.11)':
+  '@parcel/cache@2.12.0(@parcel/core@2.13.0(@swc/helpers@0.5.11))':
     dependencies:
       '@parcel/core': 2.13.0(@swc/helpers@0.5.11)
       '@parcel/fs': 2.12.0(@parcel/core@2.13.0(@swc/helpers@0.5.11))(@swc/helpers@0.5.11)
       '@parcel/logger': 2.12.0
       '@parcel/utils': 2.12.0
       lmdb: 2.8.5
-    transitivePeerDependencies:
-      - '@swc/helpers'
 
   '@parcel/cache@2.13.0(@parcel/core@2.13.0(@swc/helpers@0.5.11))':
     dependencies:
@@ -3202,12 +3200,11 @@ snapshots:
     transitivePeerDependencies:
       - '@parcel/core'
 
-  '@parcel/compressor-gzip@2.12.0(@parcel/core@2.13.0(@swc/helpers@0.5.11))(@swc/helpers@0.5.11)':
+  '@parcel/compressor-gzip@2.13.2(@parcel/core@2.13.0(@swc/helpers@0.5.11))':
     dependencies:
-      '@parcel/plugin': 2.12.0(@parcel/core@2.13.0(@swc/helpers@0.5.11))(@swc/helpers@0.5.11)
+      '@parcel/plugin': 2.13.2(@parcel/core@2.13.0(@swc/helpers@0.5.11))
     transitivePeerDependencies:
       - '@parcel/core'
-      - '@swc/helpers'
 
   '@parcel/compressor-raw@2.12.0(@parcel/core@2.13.0(@swc/helpers@0.5.11))(@swc/helpers@0.5.11)':
     dependencies:
@@ -3375,7 +3372,7 @@ snapshots:
       '@parcel/types': 2.12.0(@parcel/core@2.13.0(@swc/helpers@0.5.11))(@swc/helpers@0.5.11)
       '@parcel/utils': 2.12.0
       '@parcel/watcher': 2.4.1
-      '@parcel/workers': 2.12.0(@parcel/core@2.13.0(@swc/helpers@0.5.11))
+      '@parcel/workers': 2.12.0(@parcel/core@2.13.0(@swc/helpers@0.5.11))(@swc/helpers@0.5.11)
     transitivePeerDependencies:
       - '@swc/helpers'
 
@@ -3548,7 +3545,7 @@ snapshots:
       '@parcel/plugin': 2.12.0(@parcel/core@2.13.0(@swc/helpers@0.5.11))(@swc/helpers@0.5.11)
       '@parcel/rust': 2.12.0
       '@parcel/utils': 2.12.0
-      '@parcel/workers': 2.12.0(@parcel/core@2.13.0(@swc/helpers@0.5.11))
+      '@parcel/workers': 2.12.0(@parcel/core@2.13.0(@swc/helpers@0.5.11))(@swc/helpers@0.5.11)
     transitivePeerDependencies:
       - '@swc/helpers'
 
@@ -3612,7 +3609,7 @@ snapshots:
       '@parcel/node-resolver-core': 3.3.0(@parcel/core@2.13.0(@swc/helpers@0.5.11))
       '@parcel/types': 2.12.0(@parcel/core@2.13.0(@swc/helpers@0.5.11))(@swc/helpers@0.5.11)
       '@parcel/utils': 2.12.0
-      '@parcel/workers': 2.12.0(@parcel/core@2.13.0(@swc/helpers@0.5.11))
+      '@parcel/workers': 2.12.0(@parcel/core@2.13.0(@swc/helpers@0.5.11))(@swc/helpers@0.5.11)
       '@swc/core': 1.6.13(@swc/helpers@0.5.11)
       semver: 7.6.2
     transitivePeerDependencies:
@@ -4010,7 +4007,7 @@ snapshots:
       '@parcel/core': 2.13.0(@swc/helpers@0.5.11)
       '@parcel/plugin': 2.12.0(@parcel/core@2.13.0(@swc/helpers@0.5.11))(@swc/helpers@0.5.11)
       '@parcel/utils': 2.12.0
-      '@parcel/workers': 2.12.0(@parcel/core@2.13.0(@swc/helpers@0.5.11))
+      '@parcel/workers': 2.12.0(@parcel/core@2.13.0(@swc/helpers@0.5.11))(@swc/helpers@0.5.11)
       nullthrows: 1.1.1
     transitivePeerDependencies:
       - '@swc/helpers'
@@ -4031,7 +4028,7 @@ snapshots:
       '@parcel/rust': 2.12.0
       '@parcel/source-map': 2.1.1
       '@parcel/utils': 2.12.0
-      '@parcel/workers': 2.12.0(@parcel/core@2.13.0(@swc/helpers@0.5.11))
+      '@parcel/workers': 2.12.0(@parcel/core@2.13.0(@swc/helpers@0.5.11))(@swc/helpers@0.5.11)
       '@swc/helpers': 0.5.11
       browserslist: 4.23.1
       nullthrows: 1.1.1
@@ -4202,12 +4199,12 @@ snapshots:
 
   '@parcel/types@2.12.0(@parcel/core@2.13.0(@swc/helpers@0.5.11))(@swc/helpers@0.5.11)':
     dependencies:
-      '@parcel/cache': 2.12.0(@parcel/core@2.13.0(@swc/helpers@0.5.11))(@swc/helpers@0.5.11)
+      '@parcel/cache': 2.12.0(@parcel/core@2.13.0(@swc/helpers@0.5.11))
       '@parcel/diagnostic': 2.12.0
       '@parcel/fs': 2.12.0(@parcel/core@2.13.0(@swc/helpers@0.5.11))(@swc/helpers@0.5.11)
       '@parcel/package-manager': 2.12.0(@parcel/core@2.13.0(@swc/helpers@0.5.11))(@swc/helpers@0.5.11)
       '@parcel/source-map': 2.1.1
-      '@parcel/workers': 2.12.0(@parcel/core@2.13.0(@swc/helpers@0.5.11))
+      '@parcel/workers': 2.12.0(@parcel/core@2.13.0(@swc/helpers@0.5.11))(@swc/helpers@0.5.11)
       utility-types: 3.11.0
     transitivePeerDependencies:
       - '@parcel/core'
@@ -4316,7 +4313,7 @@ snapshots:
       '@parcel/watcher-win32-ia32': 2.4.1
       '@parcel/watcher-win32-x64': 2.4.1
 
-  '@parcel/workers@2.12.0(@parcel/core@2.13.0(@swc/helpers@0.5.11))':
+  '@parcel/workers@2.12.0(@parcel/core@2.13.0(@swc/helpers@0.5.11))(@swc/helpers@0.5.11)':
     dependencies:
       '@parcel/core': 2.13.0(@swc/helpers@0.5.11)
       '@parcel/diagnostic': 2.12.0
@@ -4325,6 +4322,8 @@ snapshots:
       '@parcel/types': 2.12.0(@parcel/core@2.13.0(@swc/helpers@0.5.11))(@swc/helpers@0.5.11)
       '@parcel/utils': 2.12.0
       nullthrows: 1.1.1
+    transitivePeerDependencies:
+      - '@swc/helpers'
 
   '@parcel/workers@2.13.0(@parcel/core@2.13.0(@swc/helpers@0.5.11))':
     dependencies:
