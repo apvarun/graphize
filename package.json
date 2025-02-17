@@ -32,7 +32,7 @@
     "@monaco-editor/react": "^4.6.0",
     "downloadjs": "^1.4.7",
     "fast-xml-parser": "^4.5.1",
-    "html-to-image": "^1.11.11",
+    "html-to-image": "^1.11.13",
     "monaco-editor": "^0.52.2",
     "rdk": "6.6.3",
     "react": "^18.3.1",
