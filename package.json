@@ -50,7 +50,7 @@
     "@parcel/optimizer-esbuild": "^2.13.3",
     "@parcel/packager-raw-url": "^2.13.3",
     "@parcel/transformer-webmanifest": "^2.13.3",
-    "@tailwindcss/postcss": "^4.0.14",
+    "@tailwindcss/postcss": "^4.0.15",
     "@types/downloadjs": "^1.4.6",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
