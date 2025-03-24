@@ -61,7 +61,7 @@
     "elkjs": "^0.10.0",
     "events": "^3.3.0",
     "gh-pages": "^6.3.0",
-    "parcel": "^2.13.3",
+    "parcel": "^2.14.2",
     "postcss": "^8.5.3",
     "process": "^0.11.10",
     "stream-browserify": "^3.0.0",
