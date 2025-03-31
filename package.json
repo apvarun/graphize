@@ -47,7 +47,7 @@
     "@parcel/compressor-brotli": "^2.13.3",
     "@parcel/compressor-gzip": "^2.13.3",
     "@parcel/config-default": "^2.13.3",
-    "@parcel/optimizer-esbuild": "^2.13.3",
+    "@parcel/optimizer-esbuild": "^2.14.4",
     "@parcel/packager-raw-url": "^2.13.3",
     "@parcel/transformer-webmanifest": "^2.13.3",
     "@tailwindcss/postcss": "^4.0.14",
