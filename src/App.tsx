@@ -70,7 +70,9 @@ function App() {
             width={width}
             height={height}
             direction={direction}
-            {...state}
+            nodes={state.nodes}
+            edges={state.edges}
+            depth={state.depth}
           />
         </div>
       </Editor>
