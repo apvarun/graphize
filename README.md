@@ -37,7 +37,7 @@ This software uses the following open source packages:
 - [Download JS](https://github.com/rndme/download)
 - [YamlJS](https://github.com/jeremyfa/yaml.js)
 - [react-zoom-pan-pinch](https://github.com/prc5/react-zoom-pan-pinch)
-- [Parcel](https://github.com/parcel-bundler/parcel)
+- [Vite](https://vite.dev/)
 
 ## Support
 
