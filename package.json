@@ -39,7 +39,7 @@
     "react-contexify": "^6.0.0",
     "react-dom": "^19.1.0",
     "react-zoom-pan-pinch": "^3.7.0",
-    "reaflow": "^5.3.4",
+    "reaflow": "^5.4.1",
     "toastify-js": "^1.12.0",
     "yamljs": "^0.3.0"
   },
