@@ -97,8 +97,8 @@ importers:
         specifier: ^1.3.0
         version: 1.3.0
       tailwindcss:
-        specifier: ^4.0.17
-        version: 4.0.17
+        specifier: ^4.1.4
+        version: 4.1.4
       timers-browserify:
         specifier: ^2.0.12
         version: 2.0.12
@@ -1716,11 +1716,11 @@ packages:
   tailwind-merge@2.6.0:
     resolution: {integrity: sha512-P+Vu1qXfzediirmHOC3xKGAYeZtPcV9g76X+xg2FD4tYgR71ewMA35Y3sCz3zhiN/dwefRpJX0yBcgwi1fXNQA==}
 
-  tailwindcss@4.0.17:
-    resolution: {integrity: sha512-OErSiGzRa6rLiOvaipsDZvLMSpsBZ4ysB4f0VKGXUrjw2jfkJRd6kjRKV2+ZmTCNvwtvgdDam5D7w6WXsdLJZw==}
-
   tailwindcss@4.1.3:
     resolution: {integrity: sha512-2Q+rw9vy1WFXu5cIxlvsabCwhU2qUwodGq03ODhLJ0jW4ek5BUtoCsnLB0qG+m8AHgEsSJcJGDSDe06FXlP74g==}
+
+  tailwindcss@4.1.4:
+    resolution: {integrity: sha512-1ZIUqtPITFbv/DxRmDr5/agPqJwF69d24m9qmM1939TJehgY539CtzeZRjbLt5G6fSy/7YqqYsfvoTEw9xUI2A==}
 
   tapable@2.2.1:
     resolution: {integrity: sha512-GNzQvQTOIP6RyTfE2Qxb8ZVlNmw0n88vp1szwWRimP02mnTsx3Wtn5qRdqY9w2XduFNUgvOwhNnQsjwCp+kqaQ==}
@@ -3464,9 +3464,9 @@ snapshots:
 
   tailwind-merge@2.6.0: {}
 
-  tailwindcss@4.0.17: {}
-
   tailwindcss@4.1.3: {}
+
+  tailwindcss@4.1.4: {}
 
   tapable@2.2.1: {}
 
