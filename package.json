@@ -44,7 +44,7 @@
     "yamljs": "^0.3.0"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.1.4",
+    "@tailwindcss/postcss": "^4.1.5",
     "@tailwindcss/vite": "^4.1.5",
     "@types/downloadjs": "^1.4.6",
     "@types/react": "^19.1.2",
