@@ -45,7 +45,7 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.7",
-    "@tailwindcss/vite": "^4.1.6",
+    "@tailwindcss/vite": "^4.1.7",
     "@types/downloadjs": "^1.4.6",
     "@types/react": "^19.1.4",
     "@types/react-dom": "^19.1.3",
