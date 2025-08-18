@@ -40,7 +40,7 @@ importers:
         version: 3.7.0(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
       reaflow:
         specifier: ^5.4.1
-        version: 5.4.1(@emotion/is-prop-valid@1.2.2)(@types/react@19.1.9)(prop-types@15.8.1)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+        version: 5.4.1(@emotion/is-prop-valid@1.2.2)(@types/react@19.1.10)(prop-types@15.8.1)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
       toastify-js:
         specifier: ^1.12.0
         version: 1.12.0
@@ -58,11 +58,11 @@ importers:
         specifier: ^1.4.6
         version: 1.4.6
       '@types/react':
-        specifier: ^19.1.9
-        version: 19.1.9
+        specifier: ^19.1.10
+        version: 19.1.10
       '@types/react-dom':
         specifier: ^19.1.7
-        version: 19.1.7(@types/react@19.1.9)
+        version: 19.1.7(@types/react@19.1.10)
       '@types/toastify-js':
         specifier: ^1.12.4
         version: 1.12.4
@@ -641,8 +641,8 @@ packages:
     peerDependencies:
       '@types/react': ^19.0.0
 
-  '@types/react@19.1.9':
-    resolution: {integrity: sha512-WmdoynAX8Stew/36uTSVMcLJJ1KRh6L3IZRx1PZ7qJtBqT3dYTgyDTx8H1qoRghErydW7xw9mSJ3wS//tCRpFA==}
+  '@types/react@19.1.10':
+    resolution: {integrity: sha512-EhBeSYX0Y6ye8pNebpKrwFJq7BoQ8J5SO6NlvNwwHjSj6adXJViPQrKlsyPw7hLBLvckEMO1yxeGdR82YBBlDg==}
 
   '@types/toastify-js@1.12.4':
     resolution: {integrity: sha512-zfZHU4tKffPCnZRe7pjv/eFKzTVHozKewFCKaCjZ4gFinKgJRz/t0bkZiMCXJxPhv/ZoeDGNOeRD09R0kQZ/nw==}
@@ -2238,11 +2238,11 @@ snapshots:
 
   '@types/estree@1.0.7': {}
 
-  '@types/react-dom@19.1.7(@types/react@19.1.9)':
+  '@types/react-dom@19.1.7(@types/react@19.1.10)':
     dependencies:
-      '@types/react': 19.1.9
+      '@types/react': 19.1.10
 
-  '@types/react@19.1.9':
+  '@types/react@19.1.10':
     dependencies:
       csstype: 3.1.3
 
@@ -3126,7 +3126,7 @@ snapshots:
 
   queue-microtask@1.2.3: {}
 
-  reablocks@8.7.14(@emotion/is-prop-valid@1.2.2)(@types/react@19.1.9)(prop-types@15.8.1)(react-dom@19.1.1(react@19.1.1))(react@19.1.1):
+  reablocks@8.7.14(@emotion/is-prop-valid@1.2.2)(@types/react@19.1.10)(prop-types@15.8.1)(react-dom@19.1.1(react@19.1.1))(react@19.1.1):
     dependencies:
       '@floating-ui/react': 0.26.28(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
       '@marko19907/string-to-color': 1.0.0
@@ -3149,7 +3149,7 @@ snapshots:
       react-dom: 19.1.1(react@19.1.1)
       react-fast-compare: 3.2.2
       react-highlight-words: 0.20.0(react@19.1.1)
-      react-textarea-autosize: 8.5.9(@types/react@19.1.9)(react@19.1.1)
+      react-textarea-autosize: 8.5.9(@types/react@19.1.10)(react@19.1.1)
       tailwind-merge: 2.6.0
     transitivePeerDependencies:
       - '@emotion/is-prop-valid'
@@ -3182,12 +3182,12 @@ snapshots:
 
   react-is@16.13.1: {}
 
-  react-textarea-autosize@8.5.9(@types/react@19.1.9)(react@19.1.1):
+  react-textarea-autosize@8.5.9(@types/react@19.1.10)(react@19.1.1):
     dependencies:
       '@babel/runtime': 7.27.0
       react: 19.1.1
-      use-composed-ref: 1.4.0(@types/react@19.1.9)(react@19.1.1)
-      use-latest: 1.3.0(@types/react@19.1.9)(react@19.1.1)
+      use-composed-ref: 1.4.0(@types/react@19.1.10)(react@19.1.1)
+      use-latest: 1.3.0(@types/react@19.1.10)(react@19.1.1)
     transitivePeerDependencies:
       - '@types/react'
 
@@ -3208,7 +3208,7 @@ snapshots:
       string_decoder: 1.3.0
       util-deprecate: 1.0.2
 
-  reaflow@5.4.1(@emotion/is-prop-valid@1.2.2)(@types/react@19.1.9)(prop-types@15.8.1)(react-dom@19.1.1(react@19.1.1))(react@19.1.1):
+  reaflow@5.4.1(@emotion/is-prop-valid@1.2.2)(@types/react@19.1.10)(prop-types@15.8.1)(react-dom@19.1.1(react@19.1.1))(react@19.1.1):
     dependencies:
       '@juggle/resize-observer': 3.4.0
       calculate-size: 1.1.1
@@ -3220,7 +3220,7 @@ snapshots:
       kld-intersections: 0.7.0
       motion: 12.7.4(@emotion/is-prop-valid@1.2.2)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
       p-cancelable: 3.0.0
-      reablocks: 8.7.14(@emotion/is-prop-valid@1.2.2)(@types/react@19.1.9)(prop-types@15.8.1)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+      reablocks: 8.7.14(@emotion/is-prop-valid@1.2.2)(@types/react@19.1.10)(prop-types@15.8.1)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
       react: 19.1.1
       react-cool-dimensions: 2.0.7(react@19.1.1)
       react-dom: 19.1.1(react@19.1.1)
@@ -3537,24 +3537,24 @@ snapshots:
       escalade: 3.2.0
       picocolors: 1.1.1
 
-  use-composed-ref@1.4.0(@types/react@19.1.9)(react@19.1.1):
+  use-composed-ref@1.4.0(@types/react@19.1.10)(react@19.1.1):
     dependencies:
       react: 19.1.1
     optionalDependencies:
-      '@types/react': 19.1.9
+      '@types/react': 19.1.10
 
-  use-isomorphic-layout-effect@1.2.0(@types/react@19.1.9)(react@19.1.1):
+  use-isomorphic-layout-effect@1.2.0(@types/react@19.1.10)(react@19.1.1):
     dependencies:
       react: 19.1.1
     optionalDependencies:
-      '@types/react': 19.1.9
+      '@types/react': 19.1.10
 
-  use-latest@1.3.0(@types/react@19.1.9)(react@19.1.1):
+  use-latest@1.3.0(@types/react@19.1.10)(react@19.1.1):
     dependencies:
       react: 19.1.1
-      use-isomorphic-layout-effect: 1.2.0(@types/react@19.1.9)(react@19.1.1)
+      use-isomorphic-layout-effect: 1.2.0(@types/react@19.1.10)(react@19.1.1)
     optionalDependencies:
-      '@types/react': 19.1.9
+      '@types/react': 19.1.10
 
   util-deprecate@1.0.2: {}
 
