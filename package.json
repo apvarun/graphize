@@ -63,7 +63,7 @@
     "tailwindcss": "^4.1.14",
     "timers-browserify": "^2.0.12",
     "typescript": "^5.9.3",
-    "vite": "^7.1.11"
+    "vite": "^7.1.12"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
