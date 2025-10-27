@@ -70,8 +70,8 @@ importers:
         specifier: ^0.2.34
         version: 0.2.34
       '@vitejs/plugin-react-swc':
-        specifier: ^4.1.0
-        version: 4.1.0(vite@7.1.11(jiti@2.6.1)(lightningcss@1.30.1))
+        specifier: ^4.2.0
+        version: 4.2.0(vite@7.1.11(jiti@2.6.1)(lightningcss@1.30.1))
       autoprefixer:
         specifier: ^10.4.21
         version: 10.4.21(postcss@8.5.6)
@@ -364,8 +364,8 @@ packages:
       fuse.js: ^6.6.2
       react: '>= 16'
 
-  '@rolldown/pluginutils@1.0.0-beta.35':
-    resolution: {integrity: sha512-slYrCpoxJUqzFDDNlvrOYRazQUNRvWPjXA17dAOISY3rDMxX6k8K4cj2H+hEYMHF81HO3uNd5rHVigAWRM5dSg==}
+  '@rolldown/pluginutils@1.0.0-beta.43':
+    resolution: {integrity: sha512-5Uxg7fQUCmfhax7FJke2+8B6cqgeUJUD9o2uXIKXhD+mG0mL6NObmVoi9wXEU1tY89mZKgAYA6fTbftx3q2ZPQ==}
 
   '@rollup/rollup-android-arm-eabi@4.52.5':
     resolution: {integrity: sha512-8c1vW4ocv3UOMp9K+gToY5zL2XiiVw3k7f1ksf4yO1FlDFQ1C2u72iACFnSOceJFsWskc2WZNqeRhFRPzv+wtQ==}
@@ -665,8 +665,8 @@ packages:
   '@types/yamljs@0.2.34':
     resolution: {integrity: sha512-gJvfRlv9ErxdOv7ux7UsJVePtX54NAvQyd8ncoiFqK8G5aeHIfQfGH2fbruvjAQ9657HwAaO54waS+Dsk2QTUQ==}
 
-  '@vitejs/plugin-react-swc@4.1.0':
-    resolution: {integrity: sha512-Ff690TUck0Anlh7wdIcnsVMhofeEVgm44Y4OYdeeEEPSKyZHzDI9gfVBvySEhDfXtBp8tLCbfsVKPWEMEjq8/g==}
+  '@vitejs/plugin-react-swc@4.2.0':
+    resolution: {integrity: sha512-/tesahXD1qpkGC6FzMoFOJj0RyZdw9xLELOL+6jbElwmWfwOnIVy+IfpY+o9JfD9PKaR/Eyb6DNrvbXpuvA+8Q==}
     engines: {node: ^20.19.0 || >=22.12.0}
     peerDependencies:
       vite: ^4 || ^5 || ^6 || ^7
@@ -2073,7 +2073,7 @@ snapshots:
       fuse.js: 6.6.2
       react: 19.2.0
 
-  '@rolldown/pluginutils@1.0.0-beta.35': {}
+  '@rolldown/pluginutils@1.0.0-beta.43': {}
 
   '@rollup/rollup-android-arm-eabi@4.52.5':
     optional: true
@@ -2288,9 +2288,9 @@ snapshots:
 
   '@types/yamljs@0.2.34': {}
 
-  '@vitejs/plugin-react-swc@4.1.0(vite@7.1.11(jiti@2.6.1)(lightningcss@1.30.1))':
+  '@vitejs/plugin-react-swc@4.2.0(vite@7.1.11(jiti@2.6.1)(lightningcss@1.30.1))':
     dependencies:
-      '@rolldown/pluginutils': 1.0.0-beta.35
+      '@rolldown/pluginutils': 1.0.0-beta.43
       '@swc/core': 1.13.5
       vite: 7.1.11(jiti@2.6.1)(lightningcss@1.30.1)
     transitivePeerDependencies:
