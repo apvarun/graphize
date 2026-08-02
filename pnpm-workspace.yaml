@@ -1,0 +1,14 @@
+allowBuilds:
+  '@swc/core': true
+  esbuild: true
+
+onlyBuiltDependencies:
+  - "@swc/core"
+  - "@tailwindcss/oxide"
+  - esbuild
+
+overrides:
+  "dompurify@<=3.4.11": ">=3.4.12"
+  "dompurify@<=3.4.10": ">=3.4.11"
+  "dompurify@<3.4.9": ">=3.4.9"
+  "brace-expansion@<1.1.17": ">=1.1.17"
