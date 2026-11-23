@@ -52,7 +52,7 @@
     "@types/toastify-js": "^1.12.4",
     "@types/yamljs": "^0.2.34",
     "@vitejs/plugin-react-swc": "^4.3.3",
-    "autoprefixer": "^10.6.2",
+    "autoprefixer": "^10.7.0",
     "buffer": "^6.0.3",
     "elkjs": "^0.12.1",
     "events": "^3.3.0",
